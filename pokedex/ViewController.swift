@@ -24,8 +24,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         initAudio()
         parsePokemonCSV()
-        
-        musicPlayer.play()
     }
     
     func initAudio() {
@@ -34,6 +32,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         do {
             try musicPlayer = AVAudioPlayer(contentsOfURL: musicUrl)
             musicPlayer.prepareToPlay()
+            musicPlayer.numberOfLoops = -1
+            musicPlayer.play()
         } catch let err as NSError {
             print(err.debugDescription)
         }
@@ -90,7 +90,15 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         return CGSizeMake(105, 105)
     }
-    @IBAction func musicBtnPressed(sender: AnyObject) {
+    @IBAction func musicBtnPressed(sender: UIButton) {
+        
+        if musicPlayer.playing {
+            musicPlayer.stop()
+            sender.alpha = 0.2
+        } else {
+            musicPlayer.play()
+            sender.alpha = 1.0
+        }
         
     }
 }
