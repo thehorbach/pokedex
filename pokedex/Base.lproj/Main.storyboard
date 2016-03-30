@@ -222,6 +222,9 @@
                                             <constraint firstAttribute="height" constant="23" id="u61-gF-Xqy"/>
                                         </constraints>
                                         <state key="normal" image="back"/>
+                                        <connections>
+                                            <action selector="backBtnPressed:" destination="T6h-FJ-mnf" eventType="touchUpInside" id="M1q-JH-4oc"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.34509803919999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -438,7 +441,18 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="currentEvoImg" destination="h8C-1J-1Jw" id="oSD-RK-DP6"/>
+                        <outlet property="evoLbl" destination="pxQ-NB-tyb" id="WIh-Hn-9Oc"/>
+                        <outlet property="nextEvoImg" destination="7jh-hN-CnP" id="i80-7h-GZi"/>
+                        <outlet property="pokemonBaseAttackLbl" destination="Wqj-dx-DDA" id="Bg0-Uu-Bqg"/>
+                        <outlet property="pokemonDefenseLbl" destination="U0k-cE-Qx2" id="7l4-b2-Ez9"/>
+                        <outlet property="pokemonDescLbl" destination="WiH-47-zqO" id="YZr-fg-ILG"/>
+                        <outlet property="pokemonHeightLbl" destination="hmz-Uh-Xiu" id="KzZ-Y8-VsL"/>
+                        <outlet property="pokemonIdLbl" destination="hPh-ae-xGw" id="nYS-BO-b00"/>
+                        <outlet property="pokemonImg" destination="Q6x-h7-paz" id="snC-13-ytz"/>
                         <outlet property="pokemonLbl" destination="mg0-td-HxT" id="VJl-d2-Knf"/>
+                        <outlet property="pokemonTypeLbl" destination="hmz-Uh-Xiu" id="vvE-Iv-FL7"/>
+                        <outlet property="pokemonWeightLbl" destination="9Ah-Co-1zo" id="0Ke-Xc-04S"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MDc-Mk-kZZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
