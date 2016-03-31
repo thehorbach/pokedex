@@ -19,36 +19,73 @@ class Pokemon {
     private var _weight: String!
     private var _baseAttack: String!
     private var _nextEvolutionTxt: String!
+    private var _nextEvolutionId: String!
+    private var _nextEvolutionLvl: String!
     private var _pokemonUrl: String!
     
+    var nextEvolutionLvl: String {
+        get {
+            if _nextEvolutionLvl == nil {
+                _nextEvolutionLvl = ""
+            }
+            
+            return _nextEvolutionLvl
+        }
+    }
     
-    
+    var nextEvolutionId: String {
+        if _nextEvolutionId == nil {
+            _nextEvolutionId = ""
+        }
+        return _nextEvolutionId
+    }
     
     var nextEvolution: String {
+        if _nextEvolutionTxt == nil {
+            _nextEvolutionTxt = ""
+        }
         return _nextEvolutionTxt
     }
     
     var baseAttack: String {
+        if _baseAttack == nil {
+            _baseAttack = ""
+        }
         return _baseAttack
     }
     
     var weight: String {
+        if _weight == nil {
+            _weight = ""
+        }
         return _weight
     }
     
     var height: String {
+        if _height == nil {
+            _height = ""
+        }
         return _height
     }
     
     var defense: String {
+        if _defense == nil {
+            _defense = ""
+        }
         return _defense
     }
     
     var type: String {
+        if _type == nil {
+            _type = ""
+        }
         return _type
     }
     
     var desc: String {
+        if _desc == nil {
+            _desc = ""
+        }
         return _desc
     }
  
@@ -131,10 +168,41 @@ class Pokemon {
                                 }
                                     
                             }
+                            completed()
+                            
                         }
+                        
                     }
                 } else {
                     self._desc = ""
+                }
+                
+                if let evolutions = dict["evolutions"] as? [Dictionary<String, AnyObject>] where evolutions.count > 0 {
+                    if let to = evolutions[0]["to"] as? String {
+                        
+                        //Can't support mega pokemon right now but
+                        //api still has mega data
+                        if to.rangeOfString("mega") == nil {
+                            if let uri = evolutions[0]["resource_uri"] as? String {
+                                let newStr = uri.stringByReplacingOccurrencesOfString("/api/v1/pokemon/", withString: "")
+                                let num = newStr.stringByReplacingOccurrencesOfString("/", withString: "")
+                                
+                                self._nextEvolutionId = num
+                                self._nextEvolutionTxt = to
+                                
+                                print(self._nextEvolutionId)
+                                print(self._nextEvolutionTxt)
+                                
+                                if let lvl = evolutions[0]["level"] as? Int {
+                                    self._nextEvolutionLvl = String(lvl)
+                                    print(self.nextEvolutionLvl)
+                                }
+                            }
+
+                        }
+                    }
+                } else {
+                    self._nextEvolutionTxt = ""
                 }
             }
         }

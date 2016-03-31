@@ -28,22 +28,46 @@ class PokemonDetailVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        pokemonLbl.text = pokemon.name
-        pokemonImg.image = UIImage(named: "\(self.pokemon.pokedexId)")
+        let imgPath = UIImage(named: "\(self.pokemon.pokedexId)")
+        
+        pokemonLbl.text = pokemon.name.capitalizedString
+        pokemonImg.image = imgPath
+        currentEvoImg.image = imgPath
         
         pokemon.downloadPokemonDetails { () -> () in
-            
-            /*
-            self.pokemonHeightLbl.text = self.pokemon.height
-            self.pokemonWeightLbl.text = self.pokemon.weight
-            self.pokemonBaseAttackLbl.text = self.pokemon.baseAttack
-            self.pokemonDefenseLbl.text = self.pokemon.defense
-            
-            let pokedexIdString = "\(self.pokemon.pokedexId)"
-            self.pokemonIdLbl.text = pokedexIdString
- */
+            //gets called only when downloading is completed
+            print("did we get here?")
+            self.updateUI()
         }
     
+    }
+    
+    func updateUI() {
+        pokemonDescLbl.text = pokemon.desc
+        pokemonTypeLbl.text = pokemon.type
+        pokemonHeightLbl.text = pokemon.height
+        pokemonIdLbl.text = String(pokemon.pokedexId)
+        pokemonWeightLbl.text = pokemon.weight
+        pokemonBaseAttackLbl.text = pokemon.baseAttack
+        pokemonDefenseLbl.text = pokemon.defense
+       
+        if pokemon.nextEvolutionId == "" {
+            evoLbl.text = "No Evolutions"
+            nextEvoImg.hidden = true
+        } else {
+            nextEvoImg.hidden = false
+            nextEvoImg.image = UIImage(named: "\(self.pokemon.nextEvolutionId)")
+            var str = "Next Evolution: \(pokemon.nextEvolution)"
+            
+            if pokemon.nextEvolutionLvl != "" {
+                str += " - LVL \(pokemon.nextEvolutionLvl)"
+            }
+            
+            evoLbl.text = str
+            
+        }
+        
+        
     }
     
     @IBAction func backBtnPressed(sender: AnyObject) {
