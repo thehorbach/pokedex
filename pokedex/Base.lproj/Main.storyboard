@@ -251,19 +251,8 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="pLS-20-oWn">
                                 <rect key="frame" x="20" y="75" width="560" height="352"/>
                                 <subviews>
-                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="k1z-Z8-76W">
-                                        <rect key="frame" x="0.0" y="0.0" width="560" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="29" id="EEp-gN-EK7"/>
-                                        </constraints>
-                                        <segments>
-                                            <segment title="Bio"/>
-                                            <segment title="Moves"/>
-                                        </segments>
-                                        <color key="tintColor" red="1" green="0.34509803919999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
-                                    </segmentedControl>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Mu3-CW-uye">
-                                        <rect key="frame" x="0.0" y="49" width="560" height="120"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="120"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="198" translatesAutoresizingMaskIntoConstraints="NO" id="Q6x-h7-paz">
                                                 <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
@@ -281,28 +270,28 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="stC-mq-0qu">
-                                        <rect key="frame" x="0.0" y="189" width="560" height="70"/>
+                                        <rect key="frame" x="0.0" y="140" width="560" height="119"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Type:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="02i-vh-qWF">
-                                                <rect key="frame" x="0.0" y="0.0" width="140" height="70"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="140" height="119"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                                 <color key="textColor" red="1" green="0.34509803919999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Grass" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Itq-aP-Uv3">
-                                                <rect key="frame" x="140" y="0.0" width="140" height="70"/>
+                                                <rect key="frame" x="140" y="0.0" width="140" height="119"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Defense:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oyt-Ti-5sz">
-                                                <rect key="frame" x="280" y="0.0" width="140" height="70"/>
+                                                <rect key="frame" x="280" y="0.0" width="140" height="119"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                                 <color key="textColor" red="1" green="0.34509803919999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Grass" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U0k-cE-Qx2">
-                                                <rect key="frame" x="420" y="0.0" width="140" height="70"/>
+                                                <rect key="frame" x="420" y="0.0" width="140" height="119"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
@@ -406,7 +395,7 @@
                                             <constraint firstAttribute="height" constant="100" id="Wlq-8s-Cb1"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="409" translatesAutoresizingMaskIntoConstraints="NO" id="7jh-hN-CnP">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7jh-hN-CnP">
                                         <rect key="frame" x="280" y="0.0" width="280" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="C9q-7m-hax"/>
@@ -464,7 +453,6 @@
         <image name="158" width="96" height="96"/>
         <image name="198" width="120" height="120"/>
         <image name="204" width="120" height="120"/>
-        <image name="409" width="120" height="120"/>
         <image name="back" width="100" height="67"/>
         <image name="bg" width="1920" height="1200"/>
         <image name="music" width="100" height="100"/>
