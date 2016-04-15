@@ -187,7 +187,7 @@
 				TargetAttributes = {
 					1198DCE11CA886EB00ADEACB = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = HJKK55TVH2;
+						DevelopmentTeam = AC6K9V2C7Z;
 					};
 				};
 			};
@@ -400,10 +400,14 @@
 			baseConfigurationReference = D03512EDC692FD4E5F9A129E /* Pods-pokedex.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Vjaceslav Horbac (AC6K9V2C7Z)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = pokedex/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.VyacheslavHorbach.pokedex;
+				PRODUCT_BUNDLE_IDENTIFIER = com.horbach.pokedex;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "d36b7faf-87f4-4d9e-a8ce-51d021e058dc";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -412,10 +416,14 @@
 			baseConfigurationReference = A2ADEFAA1BCDB890840B2653 /* Pods-pokedex.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Vjaceslav Horbac (AC6K9V2C7Z)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Vjaceslav Horbac (AC6K9V2C7Z)";
 				INFOPLIST_FILE = pokedex/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.VyacheslavHorbach.pokedex;
+				PRODUCT_BUNDLE_IDENTIFIER = com.horbach.pokedex;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "d36b7faf-87f4-4d9e-a8ce-51d021e058dc";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

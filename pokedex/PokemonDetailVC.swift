@@ -73,4 +73,8 @@ class PokemonDetailVC: UIViewController {
     @IBAction func backBtnPressed(sender: AnyObject) {
         dismissViewControllerAnimated(true, completion: nil)
     }
+    
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
 }

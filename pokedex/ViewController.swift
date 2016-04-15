@@ -152,5 +152,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             }
         }
     }
+    
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
 }
 
